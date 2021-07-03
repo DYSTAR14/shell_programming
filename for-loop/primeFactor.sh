@@ -1,6 +1,10 @@
 #!/bin/bash -x
 read -p "Enter a Number : " num
 #echo $num
+if [ $num -le 1 ];then
+	echo There is no Prime Factor
+	exit 1
+fi
 primeFactor=0
 for ((i=2;i<=$num/2;i++))
 do
@@ -10,7 +14,6 @@ do
    	do
    	   if [ $(($i%$j)) -eq 0 ];then
    	      flag=0
-   	      break
    	   fi
    	done
    	if [ $flag -eq 1 ];then

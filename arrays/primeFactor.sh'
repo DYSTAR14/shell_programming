@@ -18,6 +18,7 @@ do
    	   fi
    	done
    	if [ $flag -eq 1 ];then
+			#echo $i
 			primeFactor=1
    	   arr[$((count++))]=$i
    	fi
